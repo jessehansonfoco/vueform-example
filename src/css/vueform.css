@@ -1,0 +1,29 @@
+.vfb-element-selector-plugin {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.vfb-element-selector-plugin *,
+.vfb-element-selector-plugin :before,
+.vfb-element-selector-plugin :after,
+.vfb-element-selector-plugin :root {
+  --vf-gutter: 0.1rem !important;
+  --vf-radius-input: 0 !important;
+  --vf-bg-input: #fff !important;
+}
+.vfb-element-selector-plugin .vfb-fields-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+.vfb-element-selector-plugin .vfb-fields-plugin {
+  width: auto;
+  border-top-width: 0px;
+}
+.vfb-element-selector-plugin .vfb-field-text {
+  overflow-x: visible;
+}

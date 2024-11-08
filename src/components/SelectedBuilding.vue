@@ -27,7 +27,14 @@ export default {
 
     // `Building details` data
     const building = computed(() => {
-      return form$.value.data.building;
+      let names = [];
+      let list = form$.value.data.buildings;
+      if (!list) {
+        return '';
+      }
+
+      list.forEach((obj) => names.push('' + obj.buildings_name));
+      return names.join(',');
     });
 
     const handleChangeData = () => {

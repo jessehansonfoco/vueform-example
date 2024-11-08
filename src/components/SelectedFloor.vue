@@ -25,9 +25,15 @@ export default {
   setup(props, context) {
     const form$ = inject('form$');
 
-    // `Campus details` data
     const floor = computed(() => {
-      return form$.value.data.floor;
+      let names = [];
+      let list = form$.value.data.floors;
+      if (!list) {
+        return '';
+      }
+
+      list.forEach((obj) => names.push('' + obj.floor));
+      return names.join(',');
     });
 
     const handleChangeData = () => {
